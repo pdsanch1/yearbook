@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<h1>
+			TSL <%=@type%>
+		</h1>
+		<ul>
+			<% @students.shuffle.each do |student_hash| %>
+				<li class='frame'>
+					<img class='thumbnail' src='http://codemountain.com<%=student_hash["student"]["avatar_url"]%>'>
+					<p class='name'><%=student_hash["student"]["name"]%></p>
+				</li>
+			<% end %>
+		</ul>
+	</body>
+</html>
+
